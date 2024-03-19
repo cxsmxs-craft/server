@@ -14,6 +14,8 @@ _launch() {
         /usr/bin/env java "$@" -jar ../bin/paper.jar --nogui
     else
         echo "Starting server with default arguments"
-        ../bin/minegram
+        java -Xms12G -Xmx12G -XX:ConcGCThreads=8 -jar ../bin/paper.jar --nogui
+        # /usr/bin/java -Xms12G -Xmx12G -XX:ConcGCThreads=8 -jar /home/cubach/paper-1.20.2-260.jar --nogui
+        # /usr/bin/java -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+CMSIncrementalPacing -XX:ParallelGCThreads=7 -Xms10G -Xmx10G -jar /home/cubach/paper-1.20.1-196.jar --nogui
     fi
 }
