@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+# Do whatever here at server directory
+# or we ain't doing nothing
+cd "$(dirname "$0")/server" || exit
+
+source "../bin/update.sh"
+source "../bin/launch.sh"
+source "../bin/clean.sh"
+
+_help() {
+    echo "Usage: ${0} [options] [command]"
+    echo
+    echo "Commands:"
+    echo "  help            Show this help message"
+    echo "  update          Update the server to latest (jq needed)"
+    echo "  install         Alias for update"
+    echo "  start           Start the server"
+    echo "  clean           Clean the server"
+    echo
+    echo "If no command is provided, the launcher will show help message."
+    echo
+    echo "Options:"
+    echo "  any options to pass for java command"
+    echo
+    echo "Example:"
+    echo "  ${0} help"
+    echo "  ${0} update"
+    echo "  ${0} install"
+    echo "  ${0} start"
+    echo "  ${0} clean"
+    echo
+    echo "Onee-chan, if you stuck, dm me on telegram (you know my username, right? :D)"
+}
+
+while true; do
+    case "${1}" in
+        help)
+            _help
+            exit 0
+            ;;
+        install)
+            _update
+            exit 0
+            ;;
+        update)
+            _update
+            exit 0
+            ;;
+        clean)
+            _clean
+            exit 0
+            ;;  
+        *)
+            _launch "$@"
+            exit 1
+            ;;
+    esac
+done

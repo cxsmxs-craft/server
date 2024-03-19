@@ -1,0 +1,20 @@
+# ========================
+# Pre-compiled binaries
+# ========================
+bin/paper.jar
+
+# ========================
+# Server files
+# ========================
+
+## Server world
+server/world*
+
+## Server plugin configs
+server/plugins/*
+
+## Auto generated files
+server/logs
+server/cache
+server/libraries
+server/versions
