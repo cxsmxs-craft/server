@@ -30,7 +30,7 @@ _update() {
         echo "Download successful, renaming to paper.jar..."
 
         echo "Renaming to paper.jar..."
-        mv "$PROJECT-$LATEST_VERSION-$LATEST_BUILD.jar" ../bin/paper.jar
+        mv "$PROJECT-$LATEST_VERSION-$LATEST_BUILD.jar" ./bin/paper.jar
     else
         echo "Download failed."
         exit 1

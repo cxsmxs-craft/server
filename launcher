@@ -2,11 +2,12 @@
 
 # Do whatever here at server directory
 # or we ain't doing nothing
-cd "$(dirname "$0")/server" || exit
+cd "$(dirname "$0")" || exit
 
-source "../bin/update.sh"
-source "../bin/launch.sh"
-source "../bin/clean.sh"
+source "./bin/update.sh"
+source "./bin/launch.sh"
+source "./bin/clean.sh"
+source "./bin/backup.sh"
 
 _help() {
     echo "Usage: ${0} [options] [command]"
@@ -17,6 +18,7 @@ _help() {
     echo "  install         Alias for update"
     echo "  start           Start the server"
     echo "  clean           Clean the server"
+    echo "  backup          Backup the server"
     echo
     echo "If no command is provided, the launcher will show help message."
     echo
@@ -29,6 +31,7 @@ _help() {
     echo "  ${0} install"
     echo "  ${0} start"
     echo "  ${0} clean"
+    echo "  ${0} backup"
     echo
     echo "Onee-chan, if you stuck, dm me on telegram (you know my username, right? :D)"
 }
@@ -50,7 +53,11 @@ while true; do
         clean)
             _clean
             exit 0
-            ;;  
+            ;;
+        backup)
+            _backup
+            exit 0
+            ;;
         *)
             _launch "$@"
             exit 1

@@ -1,5 +1,8 @@
 # Launch the server peacefully
 _launch() {
+    # Enter the server directory
+    cd "$(dirname "$0")/server" || exit 1
+
     # Check if paper.jar exists
     if [[ ! -f "../bin/paper.jar" ]]; then
         echo "Ooh, paper.jar where? Maybe you forgor to run update command? :3"

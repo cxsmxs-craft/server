@@ -1,5 +1,9 @@
 # Clean up server from unnecessary files and directories
 _clean() {
+    # Enter the server directory
+    cd "$(dirname "$0")/server" || exit 1
+
+    # Define the .clean file
     CLEAN_FILE=".clean"
 
     # Check if the .clean file exists
