@@ -1,8 +1,9 @@
 ## [19/04/2024]
 
 **After a heavy fuck up, we decided to take some actions and recover older state of our server:**
-- Adding minegram for auth / telegram notification
-- 
+- Added CXSMXS/Auth for authentication
+- Cleaned up garbage
+- Removed Telegram Notifications (to be rewritten)
 
 ## [14/03/2024]
 
