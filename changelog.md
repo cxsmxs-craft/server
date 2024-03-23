@@ -5,6 +5,8 @@
 - Implemented this shit anywhere as much as I can
 - Fixed clean script behavior (thanks to better logging)
 - Improved help message and removed redundant commands
+- Added graceful shutdown via rcon
+- Added docker support to run on containers
 
 ## [19/04/2024]
 
