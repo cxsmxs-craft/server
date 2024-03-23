@@ -1,7 +1,8 @@
 # ========================
 # Pre-compiled binaries
 # ========================
-bin/paper.jar
+bin/*
+!bin/.gitkeep
 
 # ========================
 # Server files
@@ -18,3 +19,5 @@ server/logs
 server/cache
 server/libraries
 server/versions
+server/.console_history
+server/version_history.json

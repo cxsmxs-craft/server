@@ -4,36 +4,38 @@
 # or we ain't doing nothing
 cd "$(dirname "$0")" || exit
 
-source "./bin/update.sh"
-source "./bin/launch.sh"
-source "./bin/clean.sh"
-source "./bin/backup.sh"
+source "./utils/log.sh"
+
+source "./utils/update.sh"
+source "./utils/launch.sh"
+source "./utils/clean.sh"
+source "./utils/backup.sh"
 
 _help() {
-    echo "Usage: ${0} [options] [command]"
-    echo
-    echo "Commands:"
-    echo "  help            Show this help message"
-    echo "  update          Update the server to latest (jq needed)"
-    echo "  install         Alias for update"
-    echo "  start           Start the server"
-    echo "  clean           Clean the server"
-    echo "  backup          Backup the server"
-    echo
-    echo "If no command is provided, the launcher will show help message."
-    echo
-    echo "Options:"
-    echo "  any options to pass for java command"
-    echo
-    echo "Example:"
-    echo "  ${0} help"
-    echo "  ${0} update"
-    echo "  ${0} install"
-    echo "  ${0} start"
-    echo "  ${0} clean"
-    echo "  ${0} backup"
-    echo
-    echo "Onee-chan, if you stuck, dm me on telegram (you know my username, right? :D)"
+    _log "HELP" "Usage: ${0} [options] [command]"
+    _log "HELP" "  add DEBUG=true to enable debug mode before command"
+    _log "HELP" "  don't pass anything or pass JAVA args to run server"
+    _log "HELP"
+    _log "HELP" "Commands:"
+    _log "HELP" "  help            Show this help message"
+    _log "HELP" "  update          Update the server to latest (jq needed)"
+    _log "HELP" "  install         Alias for update"
+    _log "HELP" "  clean           Clean the server"
+    _log "HELP" "  backup          Backup the server"
+    _log "HELP"
+    _log "HELP" "If no command is provided, the launcher will show help message."
+    _log "HELP"
+    _log "HELP" "Options:"
+    _log "HELP" "  any options to pass for java command"
+    _log "HELP"
+    _log "HELP" "Example:"
+    _log "HELP" "  ${0} help"
+    _log "HELP" "  ${0} update"
+    _log "HELP" "  ${0} install"
+    _log "HELP" "  ${0} clean"
+    _log "HELP" "  ${0} backup"
+    _log "HELP"
+    _log "HELP" "Onee-chan, if you stuck, dm me on telegram (you know my username, right? :D)"
 }
 
 while true; do
