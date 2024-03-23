@@ -1,3 +1,11 @@
+## [23/04/2024]
+
+**Continuation to the previous update:**
+- Added logger function for better logging
+- Implemented this shit anywhere as much as I can
+- Fixed clean script behavior (thanks to better logging)
+- Improved help message and removed redundant commands
+
 ## [19/04/2024]
 
 **After a heavy fuck up, we decided to take some actions and recover older state of our server:**
