@@ -1,0 +1,14 @@
+# Git files
+.git
+.gitignore
+
+# Assets
+assets
+data
+changelog.md
+server
+
+# Docker files
+.dockerignore
+docker/Dockerfile
+docker/docker-compose.yml

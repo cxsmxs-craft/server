@@ -11,6 +11,7 @@ source "./utils/clean.sh"
 source "./utils/update.sh"
 source "./utils/launch.sh"
 source "./utils/backup.sh"
+source "./utils/stop.sh"
 
 _help() {
     _log "HELP" "Usage: ${0} [options] [command]"
@@ -38,6 +39,8 @@ _help() {
     _log "HELP"
     _log "HELP" "Onee-chan, if you stuck, dm me on telegram (you know my username, right? :D)"
 }
+
+trap _stop SIGTERM
 
 while true; do
     case "${1}" in

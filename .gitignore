@@ -22,3 +22,8 @@ server/libraries
 server/versions
 server/.console_history
 server/version_history.json
+
+# ========================
+# Docker generated
+# ========================
+data
