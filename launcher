@@ -6,9 +6,10 @@ cd "$(dirname "$0")" || exit
 
 source "./utils/log.sh"
 
+source "./utils/setup.sh"
+source "./utils/clean.sh"
 source "./utils/update.sh"
 source "./utils/launch.sh"
-source "./utils/clean.sh"
 source "./utils/backup.sh"
 
 _help() {
@@ -19,7 +20,7 @@ _help() {
     _log "HELP" "Commands:"
     _log "HELP" "  help            Show this help message"
     _log "HELP" "  update          Update the server to latest (jq needed)"
-    _log "HELP" "  install         Alias for update"
+    _log "HELP" "  setup           Setup server and generate files"
     _log "HELP" "  clean           Clean the server"
     _log "HELP" "  backup          Backup the server"
     _log "HELP"
@@ -31,7 +32,7 @@ _help() {
     _log "HELP" "Example:"
     _log "HELP" "  ${0} help"
     _log "HELP" "  ${0} update"
-    _log "HELP" "  ${0} install"
+    _log "HELP" "  ${0} setup"
     _log "HELP" "  ${0} clean"
     _log "HELP" "  ${0} backup"
     _log "HELP"
@@ -44,8 +45,8 @@ while true; do
             _help
             exit 0
             ;;
-        install)
-            _update
+        setup)
+            _setup
             exit 0
             ;;
         update)

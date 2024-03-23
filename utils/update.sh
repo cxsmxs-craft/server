@@ -33,8 +33,12 @@ _update() {
     if curl -O "$DOWNLOAD_URL"; then
         _log "INFO" "Downloaded successfully."
 
+        [[ -f ./bin/paper.jar ]] && _log "WARN" "Deleting old paper.jar..." && rm ./bin/paper.jar
+
         _log "DEBUG" "Renaming $PROJECT-$LATEST_VERSION-$LATEST_BUILD.jar to paper.jar..."
         mv "$PROJECT-$LATEST_VERSION-$LATEST_BUILD.jar" ./bin/paper.jar
+
+        _log "INFO" "Done!"
     else
         _log "ERROR" "Download failed. Exiting..."
         exit 1

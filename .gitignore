@@ -13,6 +13,7 @@ server/world*
 
 ## Server plugin configs
 server/plugins/*
+!server/plugins/.plugins
 
 ## Auto generated files
 server/logs
